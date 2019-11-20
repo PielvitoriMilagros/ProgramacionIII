@@ -1,0 +1,31 @@
+Abrir Xampp
+Start a Apache y Start a MySQL
+Click en Admin de MySQL o abrir chrome y entrar a localhost/phpMyAdmin
+
+Bases de Datos - Crear base de datos - Nombre - utf8_spanish2_ci
+
+Crear tabla --> Nombre de tabla - cantidad de columnas
+
+Para marcar una primary key en el último campo de mi clave tengo que ponerle primery, y continuar, sin completar nada más.
+
+SELECT a.id, a.nombre, a.email, m.materia, t.turno from alumno a
+INNER JOIN materias m on m.id = a.materia
+INNER JOIN turnos t on t.id = m.turno
+
+select a.nombre, m.materia from cursada c INNER JOIN materias m on m.id = c.id_materia INNER JOIN alumno a on a.id = c.id_alumno
+
+
+PARA IMPORTAR BASE DE DATOS:
+
+1. Descargar: https://github.com/octaviovillegas/Full-API-REST-Skeleton
+2. Ir a http://localhost/phpmyadmin
+3. Crear una base de datos con el nombre que haya en el Skeleton
+4. Voy sobre esa base a Importar, busco mi archivo de la base y Continuar.
+
+
+Tirar la carpeta en c://xampp/htdocs
+Abrir Postman
+localhost/Full-API-REST-Skeleton/public
+
+localhost/Full-API-REST-Skeleton/public/Mili
+

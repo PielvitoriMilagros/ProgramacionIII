@@ -1,0 +1,11 @@
+Enviar una imagen a través del header:
+
+Crear una carpeta en C:\xampp\htdocs y dentro de la carpeta, mi index.php
+Abrir el Xampp y el postman
+
+Para usar el postman: 127.0.0.1/nombre_de_la_carpeta/index.php
+
+Para mandarle algo por el header del POST tengo que entrar al Postman, apretar en Body, poner una key y cambiar el tipo a File para que me deje explorar.
+
+github.com/upszot
+30/09 --> Parcial php

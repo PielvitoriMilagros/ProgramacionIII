@@ -1,0 +1,17 @@
+Abrir la consola en mi carpeta
+
+git init
+
+git add -A
+
+git commit -a -m "comentario que quiero que aparezca"
+
+git remote add origin https://github.com/PielvitoriMilagros/LaboratorioIII.git
+
+git push -u origin master
+
+(me pide usuario y contraseña)
+Una vez que ya hice todo si quiero subir modificaciones solo tengo que hacer estos dos
+
+git commit -a -m "Segundo commit modificando archivo"
+git push -u origin master
