@@ -2,7 +2,12 @@ Abrir la consola en mi carpeta
 
 git init
 
-git add -A
+........
+git config user.name PielvitoriMilagros
+git config user.email miledupi@hotmail.com
+........
+
+git add -A  .......esto es para agregar cosas
 
 git commit -a -m "comentario que quiero que aparezca"
 

@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "8446d3ec-8a2a-4e6f-ba04-d1cf0907369d",
+		"name": "PRACTICA DOS SEGUNDO PARCIAL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Alta Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "gsaliba@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "legajo",
+									"value": "102",
+									"type": "text"
+								},
+								{
+									"key": "fotoUno",
+									"type": "file",
+									"src": "/C:/Users/Damian/Pictures/Camera Roll/Koala.jpg"
+								},
+								{
+									"key": "fotoDos",
+									"type": "file",
+									"src": "/C:/Users/Damian/Pictures/Camera Roll/Florcita.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localhost}}/users/",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNWRkN2I2MDZjYjVlYTA4YWNjZGE0NjcxYWEzNDQ2OTcwYzkxODEwIiwiZGF0YSI6eyJpZCI6MiwiZW1haWwiOiJhbGVwbGFAZ21haWwuY29tIiwibGVnYWpvIjoxMDAsInJvbCI6InVzZXIifSwiYXBwIjoiQVBJIFJFU1QgQ0QgVVROIEZSQSJ9.JtmEtc9yVPxErV9saFvWh9uut2MTyvPZ2h1Ke8fm6dE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "legajo",
+									"value": "101",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "legea@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localhost}}/login/",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ingreso",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzQ2OTUwNDIsImV4cCI6MTU3NDY5NTEwMiwiYXVkIjoiNDgwOTFiZGY2YjE1YWM5MGIzNTI2M2M0MGMyY2ExMzU3NmJhMmQ5MiIsImRhdGEiOnsiaWQiOjMsImVtYWlsIjoibGVnZWFAZ21haWwuY29tIiwibGVnYWpvIjoxMDEsInJvbCI6InVzZXIifSwiYXBwIjoiQVBJIFJFU1QgQ0QgVVROIEZSQSJ9.Ix-AqitLS3iuM_1vPcqeBb_oFLgIuLjbHvBXD7HK7Wk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/ingreso/",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"ingreso",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Egreso",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzQ2OTUwNDIsImV4cCI6MTU3NDY5NTEwMiwiYXVkIjoiNDgwOTFiZGY2YjE1YWM5MGIzNTI2M2M0MGMyY2ExMzU3NmJhMmQ5MiIsImRhdGEiOnsiaWQiOjMsImVtYWlsIjoibGVnZWFAZ21haWwuY29tIiwibGVnYWpvIjoxMDEsInJvbCI6InVzZXIifSwiYXBwIjoiQVBJIFJFU1QgQ0QgVVROIEZSQSJ9.Ix-AqitLS3iuM_1vPcqeBb_oFLgIuLjbHvBXD7HK7Wk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/egreso/",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"egreso",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Listados",
+			"item": [
+				{
+					"name": "Get Egreso x usuario",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzQ2OTUyMjUsImV4cCI6MTU3NDY5NTI4NSwiYXVkIjoiNDgwOTFiZGY2YjE1YWM5MGIzNTI2M2M0MGMyY2ExMzU3NmJhMmQ5MiIsImRhdGEiOnsiaWQiOjMsImVtYWlsIjoibGVnZWFAZ21haWwuY29tIiwibGVnYWpvIjoxMDEsInJvbCI6InVzZXIifSwiYXBwIjoiQVBJIFJFU1QgQ0QgVVROIEZSQSJ9.yP06wKH1iO0WDgIOVHUHMnHY3f0zYxu1LvPdl3pStAc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/egreso/",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"egreso",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Traer ultimos ingresos ADMIN",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzQ2OTUyMjUsImV4cCI6MTU3NDY5NTI4NSwiYXVkIjoiNDgwOTFiZGY2YjE1YWM5MGIzNTI2M2M0MGMyY2ExMzU3NmJhMmQ5MiIsImRhdGEiOnsiaWQiOjMsImVtYWlsIjoibGVnZWFAZ21haWwuY29tIiwibGVnYWpvIjoxMDEsInJvbCI6InVzZXIifSwiYXBwIjoiQVBJIFJFU1QgQ0QgVVROIEZSQSJ9.yP06wKH1iO0WDgIOVHUHMnHY3f0zYxu1LvPdl3pStAc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/ingreso/",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"ingreso",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
