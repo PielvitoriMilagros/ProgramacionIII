@@ -11,6 +11,9 @@ git add -A  .......esto es para agregar cosas
 
 git commit -a -m "comentario que quiero que aparezca"
 
+......
+Esto se usa cuando creas un repositorio nada mas
+......
 git remote add origin https://github.com/PielvitoriMilagros/LaboratorioIII.git
 
 git push -u origin master
