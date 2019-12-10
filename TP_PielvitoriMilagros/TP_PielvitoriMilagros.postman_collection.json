@@ -1,0 +1,679 @@
+{
+	"info": {
+		"_postman_id": "7348d646-de70-447d-96a5-5bde630f949a",
+		"name": "TP_PielvitoriMilagros",
+		"description": "TP La comanda 2019",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Cargar Producto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "descripcion",
+									"value": "Empanada de carne",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "comida",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "54",
+									"type": "text"
+								},
+								{
+									"key": "idRol",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "tiempoPreparacion",
+									"value": "12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/productos/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"productos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar Producto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "Empanada de carne",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "comida",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "54",
+									"type": "text"
+								},
+								{
+									"key": "idRol",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "tiempoPreparacion",
+									"value": "12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/productos/modificar",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"productos",
+								"modificar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Traer Productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/productos/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"productos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Traer un producto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/productos/17",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"productos",
+								"17"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Mesas",
+			"item": [
+				{
+					"name": "Cargar Mesa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/mesas/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"mesas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Traer Mesas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Traer Mesa Libre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/mesas/obtenerMesaLibre",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"mesas",
+								"obtenerMesaLibre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Traer una mesa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/mesas/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"mesas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Encargados",
+			"item": [
+				{
+					"name": "LogIn Encargado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "usuario",
+									"value": "jperez",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/encargados/logIn",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"encargados",
+								"logIn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cargar Encargado",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNzg5Nzk1OTA4ZWUzOTEyNmVkMDQxZDExODkzMmRkYTdlNGRjNTYxIiwiZGF0YSI6eyJpZCI6MSwibm9tYnJlIjoiSnVhbiIsImFwZWxsaWRvIjoiUGVyZXoiLCJ1c3VhcmlvIjoianBlcmV6IiwiaWRSb2wiOjMsImNhcmdvIjoic29jaW8ifSwiYXBwIjoiQVBJIFJFU1QgQ0QgVVROIEZSQSJ9.ueyXb5xeHeLieGVcDyTokuQcsSxex276m-R87sTMRiI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Marta",
+									"type": "text"
+								},
+								{
+									"key": "apellido",
+									"value": "Lopez",
+									"type": "text"
+								},
+								{
+									"key": "idRol",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/encargados/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"encargados",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar Encargado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "Monica",
+									"type": "text"
+								},
+								{
+									"key": "apellido",
+									"value": "Geller",
+									"type": "text"
+								},
+								{
+									"key": "idRol",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/encargados/modificar",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"encargados",
+								"modificar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Encargado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "8",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/encargados/baja",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"encargados",
+								"baja"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Traer Encargados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/encargados/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"encargados",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Traer un encargado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/encargados/4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"encargados",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pedidos",
+			"item": [
+				{
+					"name": "Traer Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/pedidos/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"pedidos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cargar Pedido",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNzg5Nzk1OTA4ZWUzOTEyNmVkMDQxZDExODkzMmRkYTdlNGRjNTYxIiwiZGF0YSI6eyJpZCI6NSwibm9tYnJlIjoiTWFyaWEiLCJhcGVsbGlkbyI6Ik9yaWEiLCJ1c3VhcmlvIjoibW9yaWEiLCJpZFJvbCI6NSwiY2FyZ28iOiJtb3pvIn0sImFwcCI6IkFQSSBSRVNUIENEIFVUTiBGUkEifQ.qU4A0HLVXO23InWM_BOkGax_fuoUHfIpGSwx55ewz9E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "productos",
+									"value": "16",
+									"type": "text"
+								},
+								{
+									"key": "nombreCliente",
+									"value": "Emiliano",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/pedidos/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"pedidos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Preparar Pedido",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNzg5Nzk1OTA4ZWUzOTEyNmVkMDQxZDExODkzMmRkYTdlNGRjNTYxIiwiZGF0YSI6eyJpZCI6NSwibm9tYnJlIjoiTWFyaWEiLCJhcGVsbGlkbyI6Ik9yaWEiLCJ1c3VhcmlvIjoibW9yaWEiLCJpZFJvbCI6NSwiY2FyZ28iOiJtb3pvIn0sImFwcCI6IkFQSSBSRVNUIENEIFVUTiBGUkEifQ.qU4A0HLVXO23InWM_BOkGax_fuoUHfIpGSwx55ewz9E",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigoPedido",
+									"value": "GSM9M",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/pedidos/prepararPedido",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"pedidos",
+								"prepararPedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Terminar Pedido",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNzg5Nzk1OTA4ZWUzOTEyNmVkMDQxZDExODkzMmRkYTdlNGRjNTYxIiwiZGF0YSI6eyJpZCI6NSwibm9tYnJlIjoiTWFyaWEiLCJhcGVsbGlkbyI6Ik9yaWEiLCJ1c3VhcmlvIjoibW9yaWEiLCJpZFJvbCI6NSwiY2FyZ28iOiJtb3pvIn0sImFwcCI6IkFQSSBSRVNUIENEIFVUTiBGUkEifQ.qU4A0HLVXO23InWM_BOkGax_fuoUHfIpGSwx55ewz9E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigoPedido",
+									"value": "GSM9M",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/pedidos/terminarPedido",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"pedidos",
+								"terminarPedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servir Pedido",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNzg5Nzk1OTA4ZWUzOTEyNmVkMDQxZDExODkzMmRkYTdlNGRjNTYxIiwiZGF0YSI6eyJpZCI6NSwibm9tYnJlIjoiTWFyaWEiLCJhcGVsbGlkbyI6Ik9yaWEiLCJ1c3VhcmlvIjoibW9yaWEiLCJpZFJvbCI6NSwiY2FyZ28iOiJtb3pvIn0sImFwcCI6IkFQSSBSRVNUIENEIFVUTiBGUkEifQ.qU4A0HLVXO23InWM_BOkGax_fuoUHfIpGSwx55ewz9E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigoPedido",
+									"value": "GSM9M",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/pedidos/servirPedido",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"pedidos",
+								"servirPedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pedir Cuenta",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNzg5Nzk1OTA4ZWUzOTEyNmVkMDQxZDExODkzMmRkYTdlNGRjNTYxIiwiZGF0YSI6eyJpZCI6NSwibm9tYnJlIjoiTWFyaWEiLCJhcGVsbGlkbyI6Ik9yaWEiLCJ1c3VhcmlvIjoibW9yaWEiLCJpZFJvbCI6NSwiY2FyZ28iOiJtb3pvIn0sImFwcCI6IkFQSSBSRVNUIENEIFVUTiBGUkEifQ.qU4A0HLVXO23InWM_BOkGax_fuoUHfIpGSwx55ewz9E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigoPedido",
+									"value": "GSM9M",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/pedidos/pedirCuenta",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"pedidos",
+								"pedirCuenta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cobrar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNzg5Nzk1OTA4ZWUzOTEyNmVkMDQxZDExODkzMmRkYTdlNGRjNTYxIiwiZGF0YSI6eyJpZCI6NSwibm9tYnJlIjoiTWFyaWEiLCJhcGVsbGlkbyI6Ik9yaWEiLCJ1c3VhcmlvIjoibW9yaWEiLCJpZFJvbCI6NSwiY2FyZ28iOiJtb3pvIn0sImFwcCI6IkFQSSBSRVNUIENEIFVUTiBGUkEifQ.qU4A0HLVXO23InWM_BOkGax_fuoUHfIpGSwx55ewz9E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "codigoPedido",
+									"value": "GSM9M",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/pedidos/cobrar",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"pedidos",
+								"cobrar"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
